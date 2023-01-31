@@ -7,6 +7,7 @@ createApp({
             return {
 
                   email: [],
+                  visibility: false
 
             };
 
@@ -27,6 +28,12 @@ createApp({
                               console.log(response);
                               this.email.push(response.data.response);
 
+                              if(this.email.length == 10) {
+                  
+                                    this.visibility = true;
+                  
+                              }
+                              
                         });
 
             }
